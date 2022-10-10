@@ -39,7 +39,7 @@ do_rssi(void)
 {
   int channel;
   printf("RSSI:");
-  for(channel = 0; channel <= 85; ++channel) {
+  for(channel = 11; channel <= 26; ++channel) {
     set_frq(channel);
     printf("%d ", cc2420_rssi() + 100);
   }
