@@ -4,6 +4,7 @@
 //Import Contiki-related libraries:
 //Used for overall Contiki-functionality
 #include "contiki.h"
+#include "net/rime/rime.h"
 //Used to switch the MAC-layer off and use the radio
 #include "net/netstack.h"
 
