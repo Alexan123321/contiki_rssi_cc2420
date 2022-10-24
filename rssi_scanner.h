@@ -45,7 +45,7 @@ int measure_rssi(int channel) {
     //Turn off the channel listener:
     cc2420_off();
     //Return the rssi:
-    return curr_rssi;
+    return rssi_sum;
 }
 
 //Selects the best channel
