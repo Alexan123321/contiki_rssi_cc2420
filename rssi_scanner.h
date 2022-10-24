@@ -57,7 +57,7 @@ void find_best_channel() {
     best_rssi = rssi[0]; 
     //Find the lowest RSSI and corresponding channel:
     for(int i = 0; i < NUMBER_OF_CHANNELS; i++) {
-        if(rssi[i] > best_rssi) {
+        if(rssi[i] < best_rssi) {
             best_rssi = rssi[i];
             best_channel = i + MIN_CHANNEL;
         }
