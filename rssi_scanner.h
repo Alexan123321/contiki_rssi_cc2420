@@ -9,8 +9,8 @@
 #define LOG_LEVEL LOG_LEVEL_INFO
 
 //Define channel constants:
-#define MAX_CHANNEL 11
-#define MIN_CHANNEL 26
+#define MAX_CHANNEL 26
+#define MIN_CHANNEL 11
 #define NUMBER_OF_CHANNELS (MAX_CHANNEL - MIN_CHANNEL + 1)
 
 //Define number of measurements to be taken for the average:
