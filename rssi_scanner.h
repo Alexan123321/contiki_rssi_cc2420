@@ -21,14 +21,6 @@ int best_channel = 0;
 int best_rssi = 0;
 int rssi[NUMBER_OF_CHANNELS] = {};
 
-//Measures the RSSI on all channels:
-void measure_rssis() {
-    LOG_INFO("Measuring RSSIs... \n");
-    for(int i = 0; i < NUMBER_OF_CHANNELS; i++) {
-        rssi[i] = measure_rssi(i + MIN_CHANNEL);
-    }
-}
-
 //Measures the RSSI on a given channel: 
 int measure_rssi(int channel) {
     //Turn on the channel listener:
@@ -46,6 +38,14 @@ int measure_rssi(int channel) {
     cc2420_off();
     //Return the rssi:
     return rssi_sum;
+}
+
+//Measures the RSSI on all channels:
+void measure_rssis() {
+    LOG_INFO("Measuring RSSIs... \n");
+    for(int i = 0; i < NUMBER_OF_CHANNELS; i++) {
+        rssi[i] = measure_rssi(i + MIN_CHANNEL);
+    }
 }
 
 //Selects the best channel
