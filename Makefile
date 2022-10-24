@@ -1,4 +1,4 @@
-CONTIKI_PROJECT = dct
+CONTIKI_PROJECT = rssi
 
 all: $(CONTIKI_PROJECT)
 
